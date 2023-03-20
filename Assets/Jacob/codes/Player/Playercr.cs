@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Playercr : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private float moveSpeed;
 
-    // Update is called once per frame
-    void Update()
+    [Header("Components")]
+    [SerializeField] private Rigidbody2D rig;
+    [SerializeField] private SpriteRenderer sr;
+
+    private Vector2 moveInput;
+
+    private void FixedUpdate()
     {
-        
+        Vector2 velocity = moveInput * moveSpeed;
+        rig.velocity = velocity;
     }
 }
