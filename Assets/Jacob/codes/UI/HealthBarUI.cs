@@ -10,6 +10,21 @@ public class HealthBarUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI nameText;
     [SerializeField] private Image healthBarFill;
 
+    private void OnEnable()
+    {
+        character.onTakeDamage += UpdateHealthBar;
+        character.onHeal += UpdateHealthBar;
+    }
+    private void OnDisable()
+    {
+        character.onTakeDamage -= UpdateHealthBar;
+        character.onHeal -= UpdateHealthBar;
+    }
+
+    private void Start()
+    {
+        SetNameText(character. DisplayName);
+    }
     void SetNameText(string text)
     {
         nameText.text = text;
