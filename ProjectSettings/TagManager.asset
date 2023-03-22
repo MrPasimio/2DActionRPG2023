@@ -41,9 +41,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: New Layer 2
-    uniqueID: 449526003
+  - name: BG
+    uniqueID: 3984037803
+    locked: 0
+  - name: Object
+    uniqueID: 2029631395
+    locked: 0
+  - name: Enemy
+    uniqueID: 777489283
     locked: 0
   - name: Player
     uniqueID: 2682556199
+    locked: 0
+  - name: UI
+    uniqueID: 3939721419
     locked: 0

@@ -66,7 +66,30 @@ public class Enemy : Character
 
     void AttackUpdate ()
     {
+        if(targetDistance > chaseDistance)
+        {
+            ChangeState(State.Idle);
+        }
+        else if(!InAttackRange())
+        {
+            ChangeState(State.Chase);
+        }
 
+        if(CanAttack())
+        {
+            lastAttackTime = Time.time;
+        }
+    }
+
+    void AttackTarget ()
+    {
+        lastAttackTime = Time.time;
+        AttackTarget();
+    }
+
+    bool CanAttack ()
+    {
+        return false;
     }
 
     bool InAttackRange ()

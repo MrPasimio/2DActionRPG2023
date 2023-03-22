@@ -36,7 +36,7 @@ public class Character : MonoBehaviour, IDamagable
             Die();
     }
 
-    public void Die()
+    public virtual void Die()
     {
         
     }
