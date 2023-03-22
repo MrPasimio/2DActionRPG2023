@@ -22,6 +22,9 @@ public class Enemy : Character
     private float lastAttackTime;
     private float targetDistance;
 
+    [Header("Components")]
+    [SerializeField] private SpriteRenderer spriteRenderer;
+
     void Start ()
     {
         target = FindObjectOfType<Player>().gameObject;
@@ -30,6 +33,8 @@ public class Enemy : Character
     void Update ()
     {
         targetDistance = Vector2.Distance(transform.position, target.transform.position);
+
+        spriteRenderer.flipX = GetTargetDirection().x < 0;
 
         switch(curState)
         {
@@ -87,5 +92,21 @@ public class Enemy : Character
     bool InAttackRange ()
     {
         return targetDistance <= attackDistance;
+    }
+
+    Vector2 GetTargetDirection ()
+    {
+        return (target.transform.position - transform.position).normalized;
+    }
+
+    public override void Die ()
+    {
+        DropItems();
+        Destroy(gameObject);
+    }
+
+    void DropItems ()
+    {
+
     }
 }
