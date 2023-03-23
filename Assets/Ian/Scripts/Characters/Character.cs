@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Character : MonoBehaviour, IDamagable
+public abstract class Character : MonoBehaviour, IDamagable
 {
     public enum Team
     {
@@ -15,16 +15,16 @@ public class Character : MonoBehaviour, IDamagable
     public int CurHp;
     public int MaxHp;
 
-    [SerializeField] private Team team;
+    [SerializeField] protected Team team;
 
     [Header("Audio")]
-    [SerializeField] private AudioSource audioSource;
-    [SerializeField] private AudioClip hitSFX;
+    [SerializeField] protected AudioSource audioSource;
+    [SerializeField] protected AudioClip hitSFX;
 
     public event UnityAction onTakeDamage;
     public event UnityAction onHeal;
 
-    public void TakeDamage(int damageToTake)
+    public virtual void TakeDamage(int damageToTake)
     {
         CurHp -= damageToTake;
 

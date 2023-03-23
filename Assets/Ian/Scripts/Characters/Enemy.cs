@@ -15,7 +15,6 @@ public class Enemy : Character
 
     [SerializeField] private float moveSpeed;
     [SerializeField] private float chaseDistance;
-    [SerializeField] private float attackDistance;
 
     private GameObject target;
 
@@ -100,7 +99,7 @@ public class Enemy : Character
 
     bool InAttackRange ()
     {
-        return targetDistance <= attackDistance;
+        return false;
     }
 
     Vector2 GetTargetDirection ()

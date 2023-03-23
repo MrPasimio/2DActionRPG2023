@@ -801,7 +801,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1864674795}
-  - component: {fileID: 1864674794}
+  - component: {fileID: 1864674796}
   - component: {fileID: 1864674793}
   - component: {fileID: 1864674792}
   m_Layer: 0
@@ -822,7 +822,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -923,28 +923,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.68, y: 0.73}
   m_Direction: 0
---- !u!114 &1864674794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1864674791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2916b06cb316f2d40b44353d56ac2348, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DisplayName: Enemy
-  CurHp: 10
-  MaxHp: 10
-  team: 1
-  audioSource: {fileID: 1864674792}
-  hitSFX: {fileID: 8300000, guid: bca3b75b48468b24985f3b15bf77853a, type: 3}
-  moveSpeed: 1
-  chaseDistance: 4
-  attackDistance: 1
-  spriteRenderer: {fileID: 466091856}
 --- !u!4 &1864674795
 Transform:
   m_ObjectHideFlags: 0
@@ -961,3 +939,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1864674796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864674791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e017ac2c689164590494536ad55121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DisplayName: 
+  CurHp: 0
+  MaxHp: 0
+  team: 0
+  audioSource: {fileID: 0}
+  hitSFX: {fileID: 0}
+  moveSpeed: 0
+  chaseDistance: 0
+  spriteRenderer: {fileID: 0}
+  damage: 0
+  attackRange: 0
