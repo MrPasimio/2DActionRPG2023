@@ -260,7 +260,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.49
+  orthographic size: 3.4649508
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -944,6 +944,7 @@ MonoBehaviour:
   moveSpeed: 1
   chaseDistance: 4
   attackDistance: 1
+  spriteRenderer: {fileID: 466091856}
 --- !u!4 &1864674795
 Transform:
   m_ObjectHideFlags: 0
