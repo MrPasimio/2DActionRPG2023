@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class MouseControl : MonoBehaviour
+public class MouseUtilities : MonoBehaviour
 {
     private Camera cam;
 

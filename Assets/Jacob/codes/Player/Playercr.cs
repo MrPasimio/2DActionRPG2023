@@ -10,7 +10,7 @@ public class Playercr : MonoBehaviour
     [Header("Components")]
     [SerializeField] private Rigidbody2D rig;
     [SerializeField] private SpriteRenderer sr;
-    [SerializeField] private MouseControl mouseUtilities;
+    [SerializeField] private MouseUtilities mouseUtilities;
 
     private Vector2 moveInput;
 
