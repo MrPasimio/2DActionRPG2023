@@ -46,7 +46,7 @@ public abstract class Character : MonoBehaviour, IDamagable
         return team;
     }
 
-    public void Heal (int healAmount)
+    public virtual void Heal (int healAmount)
     {
         CurHp += healAmount;
 
