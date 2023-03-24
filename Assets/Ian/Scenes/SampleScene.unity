@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 466091855}
   - component: {fileID: 466091856}
   m_Layer: 0
-  m_Name: skeleton
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -951,9 +951,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5e017ac2c689164590494536ad55121, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DisplayName: 
-  CurHp: 0
-  MaxHp: 0
+  DisplayName: Skeleton
+  CurHp: 10
+  MaxHp: 10
   team: 0
   audioSource: {fileID: 0}
   hitSFX: {fileID: 0}
@@ -962,3 +962,4 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   damage: 0
   attackRange: 0
+  attackRate: 0

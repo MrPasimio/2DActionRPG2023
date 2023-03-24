@@ -6,12 +6,13 @@ public class MeleeEnemy : Enemy
 {
     [SerializeField] private int damage;
     [SerializeField] private float attackRange;
-    [SerializeField] private float attackRate;
+    [SerializeField] private float attckRate;
 
     protected override void AttackTarget()
     {
         IDamagable damagable = target.GetComponent<IDamagable>();
-        if(damagable != null)
+
+        if (damagable != null)
         {
             damagable.TakeDamage(damage);
         }
@@ -19,7 +20,7 @@ public class MeleeEnemy : Enemy
 
     protected override bool CanAttack()
     {
-        return Time.time - lastAttackTime > attackRate;
+        return Time.time - lastAttackTime > attckRate;
     }
 
     protected override bool InAttackRange()
