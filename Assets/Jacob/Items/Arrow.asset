@@ -9,12 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a76c1e9aa31745c46942395fb7bfd1f6, type: 3}
-  m_Name: chicken
+  m_Script: {fileID: 11500000, guid: 73112f4d62d41494a8e69c86e1642189, type: 3}
+  m_Name: Arrow
   m_EditorClassIdentifier: 
-  DisplayName: chicken
-  Description: heals 20 HP.
-  Icon: {fileID: -1045181238759104467, guid: c4f3a9366af8961409b97a770879789c, type: 3}
-  MaxStackSize: 5
+  DisplayName: 
+  Description: 
+  Icon: {fileID: 0}
+  MaxStackSize: 1
   EquipPrefab: {fileID: 0}
-  HealthToGive: 20
