@@ -14,6 +14,14 @@ public class MeleeEquipItem : EquipItem
     {
         MeleeWeaponItemData i = item as MeleeWeaponItemData;
 
-        //Continue right here
+        if(Time.time - lastAttackTime < i.AttackRate)
+            return;
+
+        lastAttackTime = Time.time;
+        // Play attack animation
+
+        // shoot a raycast forwards
+        // if we hit anything, damage it
+        // play sound effect
     }
 }
