@@ -12498,72 +12498,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1776341002335001258, guid: d697acaaa021e8644bc59707415f628d, type: 3}
   m_PrefabInstance: {fileID: 1776341002282939890}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &95726177
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1180381751}
-    m_Modifications:
-    - target: {fileID: 423092111282515237, guid: 32b8752c7c678d64e82ade8998618eac, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: b5f56c6bdf7075c41b770f93ba3e2212, type: 2}
-    - target: {fileID: 520838796939136427, guid: 32b8752c7c678d64e82ade8998618eac, type: 3}
-      propertyPath: m_Name
-      value: EquipItem_IronSword
-      objectReference: {fileID: 0}
-    - target: {fileID: 2989244133293513754, guid: 32b8752c7c678d64e82ade8998618eac, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2989244133293513754, guid: 32b8752c7c678d64e82ade8998618eac, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2989244133293513754, guid: 32b8752c7c678d64e82ade8998618eac, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.33
-      objectReference: {fileID: 0}
-    - target: {fileID: 2989244133293513754, guid: 32b8752c7c678d64e82ade8998618eac, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2989244133293513754, guid: 32b8752c7c678d64e82ade8998618eac, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2989244133293513754, guid: 32b8752c7c678d64e82ade8998618eac, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2989244133293513754, guid: 32b8752c7c678d64e82ade8998618eac, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2989244133293513754, guid: 32b8752c7c678d64e82ade8998618eac, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2989244133293513754, guid: 32b8752c7c678d64e82ade8998618eac, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2989244133293513754, guid: 32b8752c7c678d64e82ade8998618eac, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2989244133293513754, guid: 32b8752c7c678d64e82ade8998618eac, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 32b8752c7c678d64e82ade8998618eac, type: 3}
---- !u!4 &95726178 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2989244133293513754, guid: 32b8752c7c678d64e82ade8998618eac, type: 3}
-  m_PrefabInstance: {fileID: 95726177}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &189365714
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12571,9 +12505,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1838849750}
     m_Modifications:
+    - target: {fileID: 1776341000680421497, guid: d697acaaa021e8644bc59707415f628d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776341002257906007, guid: d697acaaa021e8644bc59707415f628d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1776341002335001254, guid: d697acaaa021e8644bc59707415f628d, type: 3}
       propertyPath: m_Name
       value: HealthBarCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776341002335001254, guid: d697acaaa021e8644bc59707415f628d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1776341002335001255, guid: d697acaaa021e8644bc59707415f628d, type: 3}
       propertyPath: character
@@ -12662,6 +12608,10 @@ PrefabInstance:
     - target: {fileID: 1776341002335001258, guid: d697acaaa021e8644bc59707415f628d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776341002492522167, guid: d697acaaa021e8644bc59707415f628d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d697acaaa021e8644bc59707415f628d, type: 3}
@@ -13102,7 +13052,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1118251046}
   - component: {fileID: 1118251047}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13203,8 +13153,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 95726178}
+  m_Children: []
   m_Father: {fileID: 1843727639}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13438,7 +13387,7 @@ GameObject:
   - component: {fileID: 1838849751}
   - component: {fileID: 1838849748}
   - component: {fileID: 1838849747}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14031,7 +13980,19 @@ MonoBehaviour:
     m_ActionId: f1a5ea72-0016-4a53-b76f-21a631ff4a44
     m_ActionName: Main/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1843727640}
+        m_TargetAssemblyTypeName: EquipController, Assembly-CSharp
+        m_MethodName: OnUseInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 65a8274f-d7cb-47b3-b4c2-fcdd7a429c45
     m_ActionName: Main/Attack[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
