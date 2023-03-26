@@ -43,9 +43,10 @@ public class Character : MonoBehaviour, IDamagable  //L10 add the IDamagable Int
        
     }
 
-    public void Die()
+    public virtual void Die()
     {
-        
+        //L12 Added Virtual to include the override ability.
+
     }
 
     public Team GetTeam()

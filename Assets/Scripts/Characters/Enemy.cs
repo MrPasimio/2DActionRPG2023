@@ -22,6 +22,9 @@ public class Enemy : Character
     private float lastAttackTime;
     private float targetDistance;
 
+    [Header("Components")]
+    [SerializeField] private SpriteRenderer spriteRenderer;
+
     private void Start()
     {
         //L11
@@ -31,6 +34,9 @@ public class Enemy : Character
     private void Update()
     {
         targetDistance = Vector2.Distance(transform.position, target.transform.position);
+        spriteRenderer.flipX = GetTargetDirection().x < 0;
+
+
 
         switch(curState)
         {
@@ -43,8 +49,6 @@ public class Enemy : Character
             case State.Attack:
                 AttackUpdate();
                 break;
-
-
         }
     }
 
@@ -80,11 +84,52 @@ public class Enemy : Character
 
     void AttackUpdate()
     {
+        //L12
+
+        if(targetDistance > chaseDistance)
+        {
+            ChangeState(State.Idle);
+        }else if (!inAttackRange())
+        {
+            ChangeState(State.Chase);
+        }
+
+        if(CanAttack())
+        {
+            lastAttackTime = Time.time;
+            AttackTarget();
+        }
+    }
+
+    //L12
+    bool CanAttack()
+    {
+        return false;
+    }
+
+    void AttackTarget()
+    {
 
     }
 
     bool inAttackRange()
     {
         return targetDistance <= attackDistance;
+    }
+
+    Vector2 GetTargetDirection()
+    {
+        return (target.transform.position - transform.position).normalized;
+    }
+
+    public override void Die()
+    {
+        DropItems();
+        Destroy(gameObject);
+    }
+
+    void DropItems()
+    {
+
     }
 }
