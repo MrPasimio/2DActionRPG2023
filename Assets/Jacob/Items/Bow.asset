@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96adb008090c4e34e8a7da53a4fd1980, type: 3}
   m_Name: Bow
   m_EditorClassIdentifier: 
-  DisplayName: 
-  Description: 
-  Icon: {fileID: 0}
+  DisplayName: Bow
+  Description: Shoots arrows.
+  Icon: {fileID: 21300000, guid: 960a47ad9509af641a14409765bbabe5, type: 3}
   MaxStackSize: 1
   EquipPrefab: {fileID: 0}
-  FireRate: 0
+  FireRate: 0.5
   ProjectilePrefab: {fileID: 0}
-  ProjectileItemDeta: {fileID: 0}
+  ProjectileItemDeta: {fileID: 11400000, guid: e9e664bcc356cbb41a46b2dcf2dc5f10, type: 2}

@@ -11,7 +11,67 @@ public class EquipController : MonoBehaviour
 
     private bool useInput;
 
+    [SerializeField] private itemsData testEquipItme;
+
     [Header("Components")]
     [SerializeField] private Transform equipObjectOrigin;
     [SerializeField] private MouseUtilities mouseUtilities;
+
+    void Start()
+    {
+        Equip(testEquipItme);
+    }
+
+    void Update()
+    {
+        Vector2 mouseDir = mouseUtilities.GetMouseDirection(transform.position);
+
+        transform.up = mouseDir;
+
+        if (HasItemEquipped())
+        {
+            if (useInput && EventSystem.current.IsPointerOverGameObject() == false)
+            {
+                curEquipItem.OnUse();
+            }
+        }
+    }
+
+    public void Equip (itemsData items)
+    {
+        if (HasItemEquipped())
+        {
+            UnEquip();
+        }
+
+        curEquipObject = Instantiate(items.EquipPrefab, equipObjectOrigin);
+        curEquipItem = curEquipObject.GetComponent<EquipItem>();
+    }
+
+    public void UnEquip()
+    {
+        if(curEquipItem != null)
+        {
+            Destroy(curEquipObject);
+        }
+
+        curEquipItem = null;
+    }
+
+    public bool HasItemEquipped()
+    {
+        return curEquipItem != null;
+    }
+
+    public void OnUseInput (InputAction.CallbackContext context)
+    {
+        if(context.phase == InputActionPhase.Performed)
+        {
+            useInput = true;
+        }
+        if(context.phase == InputActionPhase.Canceled)
+        {
+            useInput = false;
+        }
+    }
 }

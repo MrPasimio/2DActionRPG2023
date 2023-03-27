@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73112f4d62d41494a8e69c86e1642189, type: 3}
   m_Name: Arrow
   m_EditorClassIdentifier: 
-  DisplayName: 
-  Description: 
-  Icon: {fileID: 0}
-  MaxStackSize: 1
+  DisplayName: arrow
+  Description: Shot by a bow
+  Icon: {fileID: 21300000, guid: c481824454494e542bb2bbbf40387ec4, type: 3}
+  MaxStackSize: 50
   EquipPrefab: {fileID: 0}
