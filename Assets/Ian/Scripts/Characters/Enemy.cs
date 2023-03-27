@@ -16,7 +16,7 @@ public abstract class Enemy : Character
     [SerializeField] protected float moveSpeed;
     [SerializeField] protected float chaseDistance;
 
-    protected GameObject target;
+    [SerializeField] protected GameObject target;
 
     protected float lastAttackTime;
     protected float targetDistance;
@@ -83,6 +83,7 @@ public abstract class Enemy : Character
         if(CanAttack())
         {
             lastAttackTime = Time.time;
+            AttackTarget();
         }
     }
 
