@@ -24,4 +24,22 @@ public class HealthBarUI : MonoBehaviour
         float healthPercent = (float)character.curHp / (float)character.maxHp;
         healthBarFill.fillAmount = healthPercent;
     }
+
+    //Lesson 16
+    private void Start()
+    {
+        SetNameText(character.displayName);
+    }
+
+    private void OnEnable()
+    {
+        character.onTakeDamage += UpdateHealthBar;
+        character.onHeal += UpdateHealthBar;
+    }
+
+    private void OnDisable()
+    {
+        character.onTakeDamage -= UpdateHealthBar;
+        character.onHeal -= UpdateHealthBar;
+    }
 }
