@@ -802,7 +802,7 @@ GameObject:
   - component: {fileID: 1769336719}
   - component: {fileID: 1769336718}
   - component: {fileID: 1769336717}
-  - component: {fileID: 1769336716}
+  - component: {fileID: 1769336720}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -810,29 +810,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1769336716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1769336715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c44246e9ee6bb2f40be0acaf4b099014, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  displayName: Enemy
-  curHp: 10
-  maxHp: 10
-  team: 1
-  audioSource: {fileID: 1769336718}
-  hitSFX: {fileID: 8300000, guid: bca3b75b48468b24985f3b15bf77853a, type: 3}
-  moveSpeed: 1
-  chaseDistance: 4
-  attackDistance: 1
-  target: {fileID: 0}
-  spriteRenderer: {fileID: 345294782}
 --- !u!70 &1769336717
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -961,3 +938,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1769336720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769336715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c710fc9a681796743967f4f5340c10d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayName: Goblin
+  curHp: 10
+  maxHp: 10
+  team: 1
+  audioSource: {fileID: 1769336718}
+  hitSFX: {fileID: 8300000, guid: bca3b75b48468b24985f3b15bf77853a, type: 3}
+  moveSpeed: 2
+  chaseDistance: 4
+  target: {fileID: 0}
+  spriteRenderer: {fileID: 345294782}
+  damage: 5
+  attackRange: 2
+  attackRate: 1

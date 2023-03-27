@@ -4,7 +4,8 @@ using UnityEngine;
 //Lesson 9 Add Events Library
 using UnityEngine.Events;
 
-public class Character : MonoBehaviour, IDamagable  //L10 add the IDamagable Interface
+//L13 - Made the class abstract
+public abstract class Character : MonoBehaviour, IDamagable  //L10 add the IDamagable Interface
 {
 
     //Lesson 9 variables
@@ -19,18 +20,20 @@ public class Character : MonoBehaviour, IDamagable  //L10 add the IDamagable Int
     public int curHp;
     public int maxHp;
 
-    [SerializeField] private Team team;
+    //L13 - Changed private to protected
+    [SerializeField] protected Team team;
 
     [Header("Audio")]
-    [SerializeField] private AudioSource audioSource;
-    [SerializeField] private AudioClip hitSFX;
+    [SerializeField] protected AudioSource audioSource;
+    [SerializeField] protected AudioClip hitSFX;
 
     public event UnityAction onTakeDamage;
     public event UnityAction onHeal;
 
 
     //L10 Add IDamageable Methods
-    public void TakeDamage(int damageToTake)
+    //L13 Added virtual to allow overrides
+    public virtual void TakeDamage(int damageToTake)
     {
         curHp -= damageToTake;
         audioSource.PlayOneShot(hitSFX);
@@ -55,7 +58,7 @@ public class Character : MonoBehaviour, IDamagable  //L10 add the IDamagable Int
     }
 
     //L10 Add Heal method
-    public void Heal(int healAmount)
+    public virtual void Heal(int healAmount)
     {
         curHp += healAmount;
 

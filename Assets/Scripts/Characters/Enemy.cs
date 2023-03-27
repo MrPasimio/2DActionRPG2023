@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : Character
+//L13 Made the class abstract
+public abstract class Enemy : Character
 {
    public enum State
     {
@@ -11,27 +12,29 @@ public class Enemy : Character
         Attack
     }
 
-    private State curState;
+    //L13 changed variables from private to protected
+    protected State curState;
 
-    [SerializeField] private float moveSpeed;
-    [SerializeField] private float chaseDistance;
-    [SerializeField] private float attackDistance;
+    [SerializeField] protected float moveSpeed;
+    [SerializeField] protected float chaseDistance;
+    //L13 Removed
+    //[SerializeField] private float attackDistance;
 
-    [SerializeField] private GameObject target;
+    [SerializeField] protected GameObject target;
 
-    private float lastAttackTime;
-    private float targetDistance;
+    protected float lastAttackTime;
+    protected float targetDistance;
 
     [Header("Components")]
-    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] protected SpriteRenderer spriteRenderer;
 
-    private void Start()
+    protected virtual void Start()
     {
         //L11
         target = FindObjectOfType<Player>().gameObject;
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         targetDistance = Vector2.Distance(transform.position, target.transform.position);
         spriteRenderer.flipX = GetTargetDirection().x < 0;
@@ -69,7 +72,7 @@ public class Enemy : Character
     {
         //L11 if Enemy is close enough to attack, start attacking
         // if Enemy is to far to chase, start idling
-        if(inAttackRange())
+        if(InAttackRange())
         {
             ChangeState(State.Attack);
         }
@@ -89,7 +92,7 @@ public class Enemy : Character
         if(targetDistance > chaseDistance)
         {
             ChangeState(State.Idle);
-        }else if (!inAttackRange())
+        }else if (!InAttackRange())
         {
             ChangeState(State.Chase);
         }
@@ -102,22 +105,24 @@ public class Enemy : Character
     }
 
     //L12
-    bool CanAttack()
+    protected virtual bool CanAttack()
     {
         return false;
     }
 
-    void AttackTarget()
+    protected virtual void AttackTarget()
     {
 
     }
 
-    bool inAttackRange()
+    protected virtual bool InAttackRange()
     {
-        return targetDistance <= attackDistance;
+        //L13 Removed
+        //return targetDistance <= attackDistance;
+        return false;
     }
 
-    Vector2 GetTargetDirection()
+    protected Vector2 GetTargetDirection()
     {
         return (target.transform.position - transform.position).normalized;
     }
@@ -128,7 +133,7 @@ public class Enemy : Character
         Destroy(gameObject);
     }
 
-    void DropItems()
+    protected void DropItems()
     {
 
     }
