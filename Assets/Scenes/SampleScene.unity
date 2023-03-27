@@ -353,6 +353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33e05349c81fa8e498e464b0d090fc94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  testEquipItme: {fileID: 11400000, guid: 8bb060b845d29294799e21de1fc6d239, type: 2}
   equipObjectOrigin: {fileID: 550659523}
   mouseUtilities: {fileID: 317477432}
 --- !u!1 &299283777
@@ -798,6 +799,71 @@ MonoBehaviour:
   team: 0
   audioSource: {fileID: 317477433}
   hitSFX: {fileID: 8300000, guid: bca3b75b48468b24985f3b15bf77853a, type: 3}
+--- !u!1001 &509798888
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 550659523}
+    m_Modifications:
+    - target: {fileID: 8077434805841951099, guid: 90e49b22f144b7140af104872f46181a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077434805841951099, guid: 90e49b22f144b7140af104872f46181a, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e273c72c3ee7780408ac5086b73c256e, type: 2}
+    - target: {fileID: 8077434805841951100, guid: 90e49b22f144b7140af104872f46181a, type: 3}
+      propertyPath: m_Name
+      value: EquipItem_IronSword
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077434805841951101, guid: 90e49b22f144b7140af104872f46181a, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077434805841951101, guid: 90e49b22f144b7140af104872f46181a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.08500004
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077434805841951101, guid: 90e49b22f144b7140af104872f46181a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.304
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077434805841951101, guid: 90e49b22f144b7140af104872f46181a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077434805841951101, guid: 90e49b22f144b7140af104872f46181a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077434805841951101, guid: 90e49b22f144b7140af104872f46181a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077434805841951101, guid: 90e49b22f144b7140af104872f46181a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077434805841951101, guid: 90e49b22f144b7140af104872f46181a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077434805841951101, guid: 90e49b22f144b7140af104872f46181a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077434805841951101, guid: 90e49b22f144b7140af104872f46181a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077434805841951101, guid: 90e49b22f144b7140af104872f46181a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 90e49b22f144b7140af104872f46181a, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -966,7 +1032,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2144998675}
+  - {fileID: 1444457321}
   m_Father: {fileID: 231833984}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2910,6 +2976,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!4 &1444457321 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8077434805841951101, guid: 90e49b22f144b7140af104872f46181a, type: 3}
+  m_PrefabInstance: {fileID: 509798888}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1718179615
 GameObject:
   m_ObjectHideFlags: 0
@@ -14786,77 +14857,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &2144998674
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2144998675}
-  - component: {fileID: 2144998677}
-  - component: {fileID: 2144998676}
-  m_Layer: 3
-  m_Name: EquipItem_IronSword
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2144998675
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2144998674}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 550659523}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2144998676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2144998674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68a7ad1d35bfe6d4ebcac8aced777e58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 0}
-  hitLayerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  anim: {fileID: 2144998677}
-  swingSFX: {fileID: 8300000, guid: 822201f4b5943184fa60157f19e93089, type: 3}
---- !u!95 &2144998677
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2144998674}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &7739497649474257354
 PrefabInstance:
   m_ObjectHideFlags: 0
