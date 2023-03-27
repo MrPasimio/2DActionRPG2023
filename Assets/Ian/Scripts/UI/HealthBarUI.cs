@@ -6,15 +6,19 @@ using TMPro;
 
 public class HealthBarUI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Character character;
+    [SerializeField] private TextMeshProUGUI nameText;
+    [SerializeField] private Image healthBarFill;
+
+    
+    void SetNameText (string text)
     {
-        
+        nameText.text = text;
     }
 
-    // Update is called once per frame
-    void Update()
+    void UpdateHealthBar ()
     {
-        
+        float healthPercent = (float)character.CurHp / (float)character.MaxHp;
+        healthBarFill.fillAmount = healthPercent;
     }
 }
