@@ -107,9 +107,9 @@ TextureImporter:
       name: potion_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 0
-        width: 9
+        width: 11
         height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -128,10 +128,10 @@ TextureImporter:
       name: potion_1
       rect:
         serializedVersion: 2
-        x: 12
+        x: 11
         y: 0
-        width: 9
-        height: 10
+        width: 11
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
