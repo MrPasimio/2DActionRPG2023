@@ -133,6 +133,8 @@ public class Inventory : MonoBehaviour
         {
             FoodItemData food = slot.Item as FoodItemData;
             Player.Instance.Heal(food.HealthToGive);
+
+            RemoveItem(slot);
         }
     }
 

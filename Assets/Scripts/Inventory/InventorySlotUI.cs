@@ -5,12 +5,18 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
 
-public class InventorySlotUI : MonoBehaviour
+public class InventorySlotUI : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] private Image icon;
     [SerializeField] private TextMeshProUGUI quantityText;
 
     private ItemSlot itemSlot;
+
+    public void OnPointerClick (PointerEventData eventData)
+    {
+        if (itemSlot.Item != null)
+            Inventory.Instance.UseItem(itemSlot);
+    }
 
     public void SetItemSlot (ItemSlot slot)
     {

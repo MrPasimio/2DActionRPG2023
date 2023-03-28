@@ -13278,6 +13278,10 @@ MonoBehaviour:
   starterItems:
   - {fileID: 11400000, guid: 9a0381dca4f12d94cb2391f9b4a227de, type: 2}
   - {fileID: 11400000, guid: 7ff82c1ab22ddf541833a5baaf1a3d5d, type: 2}
+  - {fileID: 11400000, guid: 7ff82c1ab22ddf541833a5baaf1a3d5d, type: 2}
+  - {fileID: 11400000, guid: 7ff82c1ab22ddf541833a5baaf1a3d5d, type: 2}
+  - {fileID: 11400000, guid: 7ff82c1ab22ddf541833a5baaf1a3d5d, type: 2}
+  - {fileID: 11400000, guid: 7ff82c1ab22ddf541833a5baaf1a3d5d, type: 2}
   inventorySize: 12
   UI: {fileID: 1496962975}
 --- !u!4 &1057402469
@@ -15059,7 +15063,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc532c390be981940b65f556a23a3f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testEquipItem: {fileID: 11400000, guid: 9a0381dca4f12d94cb2391f9b4a227de, type: 2}
   equipObjectOrigin: {fileID: 1180381751}
   mouseUtilities: {fileID: 2116798443}
 --- !u!1001 &1878042689
