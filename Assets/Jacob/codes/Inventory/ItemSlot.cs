@@ -2,17 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemSlot : MonoBehaviour
+public class ItemSlot 
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public itemsData Item;
+    public int Quantiy;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public static int Length { get; internal set; }
 }
