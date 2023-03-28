@@ -45,7 +45,7 @@ public class Inventory : MonoBehaviour
         if(slot != null)
         {
             slot.Quantity++;
-            // Update UI
+            UI.UpdateUI(itemSlots);
             return;
         }
 
@@ -62,7 +62,7 @@ public class Inventory : MonoBehaviour
             return;
         }
 
-        // Update the UI
+        UI.UpdateUI(itemSlots);
     }
 
     // Removes the requested item from the inventory.
@@ -95,7 +95,7 @@ public class Inventory : MonoBehaviour
             slot.Quantity = 0;
         }
 
-        // Update the UI
+        UI.UpdateUI(itemSlots);
     }
 
     // Returns in item slot that the requested item can fit into.
