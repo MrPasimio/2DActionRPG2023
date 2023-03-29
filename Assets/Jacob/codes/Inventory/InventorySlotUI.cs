@@ -1,18 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using UnityEngine.EventSystems;
 
 public class InventorySlotUI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Image icon;
+    [SerializeField] private TextMeshProUGUI quantityText;
+    private ItemSlot itemSlot;
 
-    // Update is called once per frame
-    void Update()
+    public void SetItemSlot(ItemSlot slot)
     {
-        
+        itemSlot = slot;
+        if (slot.Item == null)
+        {
+            icon.enabled = false;
+            quantityText.text = string.Empty;
+        }
+        else
+        {
+            icon.enabled = true;
+            icon.sprite = slot.Item.Icon;
+            quantityText.text = slot.Quantiy > 1 ? slot.Quantiy.ToString() : string.Empty;
+        }
     }
 }

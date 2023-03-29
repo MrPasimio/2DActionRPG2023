@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private InventorySlotUI[] uiSlots;
+    public ItemTooltipUI TooltipUI;
+    public void UpdateUI(ItemSlot[] items)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        for (int i = 0; i < uiSlots.Length; i++)
+        {
+            uiSlots[i].SetItemSlot(items[i]);
+        }
     }
 }
