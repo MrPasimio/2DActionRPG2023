@@ -13851,37 +13851,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76bef70e09a0c5e4686353adb327d6c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1357358072
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1357358073}
-  m_Layer: 0
-  m_Name: WorldItem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1357358073
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1357358072}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.07840749, y: -0.05848538, z: 0.05825238}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1380475295
 GameObject:
   m_ObjectHideFlags: 0
@@ -15326,6 +15295,11 @@ MonoBehaviour:
   hitSFX: {fileID: 8300000, guid: bca3b75b48468b24985f3b15bf77853a, type: 3}
   moveSpeed: 2
   chaseDistance: 4
+  dropItems:
+  - {fileID: 11400000, guid: 7ff82c1ab22ddf541833a5baaf1a3d5d, type: 2}
+  - {fileID: 11400000, guid: 774082de38d587a4187f7ac7d95e2acc, type: 2}
+  - {fileID: 11400000, guid: 3b98e3528cf81ab42899dcf04885cb08, type: 2}
+  dropItemPrefab: {fileID: 6036440179108641600, guid: 0c394739b33760940b82653424a61b65, type: 3}
   spriteRenderer: {fileID: 1118251047}
   damage: 5
   attackRange: 1
@@ -16054,7 +16028,7 @@ GameObject:
   - component: {fileID: 2116798444}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
