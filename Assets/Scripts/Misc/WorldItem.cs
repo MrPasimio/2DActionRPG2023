@@ -27,7 +27,7 @@ public class WorldItem : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Inventory.Instance.AddItem(itemToGive);
-            // Play sound effect.
+            AudioManager.Instance.PlayPlayerSound(pickupSFX);
             Destroy(gameObject);
         }
     }
