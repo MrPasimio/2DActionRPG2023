@@ -2,19 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
+
 using TMPro;
+using UnityEngine.EventSystems;
+
 
 public class InventorySlotUI : MonoBehaviour
 {
     [SerializeField] private Image icon;
     [SerializeField] private TextMeshProUGUI quantityText;
 
-    private ItemSlot ItemSlot;
+    private ItemSlot itemSlot;
 
-    public void SetItemSlot (ItemSlot slot)
+    public void SetItemSlot(ItemSlot slot)
     {
-        ItemSlot = slot;
+        itemSlot = slot;
 
         if (slot.Item == null)
         {

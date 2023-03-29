@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
 {
-    [SerializeField] private InventorySlotUI[] uislot;
-    public ItemTooltipUI TooltipUI;
 
-    public void UpdateUi (ItemSlot[] items)
+    [SerializeField] private InventorySlotUI[] uiSlots;
+    public ItemTooltipUI TooltipUI;
+    public void UpdateUI(ItemSlot[] items)
     {
-       for(int i = 0; i < uislot.Length; i++)
+        for (int i = 0; i < uiSlots.Length; i++)
         {
-            uislot[i].SetItemSlot(items[i]);
+            uiSlots[i].SetItemSlot(items[i]);
+
         }
     }
 }
