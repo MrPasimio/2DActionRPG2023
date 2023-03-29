@@ -8,9 +8,11 @@ public class Inventory : MonoBehaviour
     [SerializeField] private int inventorySize;
     private ItemSlot[] itemSlots;
 
+
     public InventoryUI UI;
 
     public static Inventory Instance;
+
 
      void Awake()
      {
@@ -19,10 +21,12 @@ public class Inventory : MonoBehaviour
             Destroy(gameObject);
         }
 
+
         else
         {
             Instance = this;
         }
+
                 
      }
      void Start()
@@ -140,4 +144,5 @@ public class Inventory : MonoBehaviour
             }
             return false;
         }
+
     }

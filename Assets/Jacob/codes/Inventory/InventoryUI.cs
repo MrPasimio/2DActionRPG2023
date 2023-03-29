@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
 {
+
     [SerializeField] private InventorySlotUI[] uiSlots;
     public ItemTooltipUI TooltipUI;
     public void UpdateUI(ItemSlot[] items)
@@ -11,6 +12,7 @@ public class InventoryUI : MonoBehaviour
         for (int i = 0; i < uiSlots.Length; i++)
         {
             uiSlots[i].SetItemSlot(items[i]);
+
         }
     }
 }
