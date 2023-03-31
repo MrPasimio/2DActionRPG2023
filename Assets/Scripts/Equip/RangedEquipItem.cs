@@ -19,13 +19,13 @@ public class RangedEquipItem : EquipItem
             return;
 
         lastAttackTime = Time.time;
-
+        
         // spawn the projectile
         i.Fire(muzzle.position, muzzle.rotation, Character.Team.Player);
-
+        
         // remove the projectile from our inventory
         Inventory.Instance.RemoveItem(i.ProjectileItemData);
-
+        
         // play the sound effect
         AudioManager.Instance.PlayPlayerSound(shootSFX);
     }

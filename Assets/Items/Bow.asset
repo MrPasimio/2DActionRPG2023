@@ -18,5 +18,5 @@ MonoBehaviour:
   MaxStackSize: 1
   EquipPrefab: {fileID: 3316169157648183559, guid: 6c3caab0b4d487a4aadcb972add17061, type: 3}
   FireRate: 0.5
-  ProjectilePrefab: {fileID: 0}
+  ProjectilePrefab: {fileID: 1043518747472204150, guid: 3e471f7b492b53e4bb64da5ad871fd74, type: 3}
   ProjectileItemData: {fileID: 11400000, guid: 74b2793c7bc86a042bbb6cd4f80d6b8e, type: 2}
