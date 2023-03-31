@@ -18,10 +18,21 @@ public class MeleeEquipItem : EquipItem
             return;
 
         lastAttackTime = Time.time;
-        // Play attack animation
 
-        // Shoot a raycast forwards
-        // If we hit anything, damage it
+        anim.SetTrigger("Attack");
+
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, i.Range, hitLayerMask);
+
+        if(hit.collider != null)
+        {
+            IDamagable damagable = hit.collider.GetComponent<IDamagable>();
+
+            if(damagable != null)
+            {
+                damagable.TakeDamage(i.Damage);
+            }
+        }
+
         // Play sound effect
 
     }
