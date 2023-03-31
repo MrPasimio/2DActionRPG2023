@@ -11972,6 +11972,72 @@ MonoBehaviour:
   team: 0
   audioSource: {fileID: 726029761}
   hitSFX: {fileID: 8300000, guid: bca3b75b48468b24985f3b15bf77853a, type: 3}
+--- !u!1001 &1301909323
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1713858944}
+    m_Modifications:
+    - target: {fileID: 925972208287897843, guid: 46d151464d07cee41b7643c7d56a02e1, type: 3}
+      propertyPath: m_Name
+      value: EquipItem_IronSword
+      objectReference: {fileID: 0}
+    - target: {fileID: 3049675760006025969, guid: 46d151464d07cee41b7643c7d56a02e1, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d84718b3afb923241b383a7a827c3db3, type: 2}
+    - target: {fileID: 5347785571713957021, guid: 46d151464d07cee41b7643c7d56a02e1, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5347785571713957021, guid: 46d151464d07cee41b7643c7d56a02e1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5347785571713957021, guid: 46d151464d07cee41b7643c7d56a02e1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5347785571713957021, guid: 46d151464d07cee41b7643c7d56a02e1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5347785571713957021, guid: 46d151464d07cee41b7643c7d56a02e1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5347785571713957021, guid: 46d151464d07cee41b7643c7d56a02e1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5347785571713957021, guid: 46d151464d07cee41b7643c7d56a02e1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5347785571713957021, guid: 46d151464d07cee41b7643c7d56a02e1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5347785571713957021, guid: 46d151464d07cee41b7643c7d56a02e1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5347785571713957021, guid: 46d151464d07cee41b7643c7d56a02e1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5347785571713957021, guid: 46d151464d07cee41b7643c7d56a02e1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 46d151464d07cee41b7643c7d56a02e1, type: 3}
+--- !u!4 &1301909324 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5347785571713957021, guid: 46d151464d07cee41b7643c7d56a02e1, type: 3}
+  m_PrefabInstance: {fileID: 1301909323}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1343765297
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12089,7 +12155,7 @@ GameObject:
   - component: {fileID: 1535209050}
   - component: {fileID: 1535209051}
   m_Layer: 0
-  m_Name: Equip Container
+  m_Name: EquipContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12103,10 +12169,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1535209049}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.308, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1713858944}
   m_Father: {fileID: 726029759}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12122,6 +12189,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5691a5e6aff51b49b45748673cae4d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  testEquipItem: {fileID: 11400000, guid: 83e50adb628306948a04fcb53843f8cd, type: 2}
+  equipObjectOrigin: {fileID: 1713858944}
+  mouseUtilities: {fileID: 726029760}
 --- !u!1 &1682670746
 GameObject:
   m_ObjectHideFlags: 0
@@ -12204,6 +12274,38 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 726029759}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1713858943
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1713858944}
+  m_Layer: 0
+  m_Name: EquipOrigin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1713858944
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713858943}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.33, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1301909324}
+  m_Father: {fileID: 1535209050}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1864674791

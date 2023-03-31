@@ -11,11 +11,18 @@ public class EquipController : MonoBehaviour
 
     private bool useInput;
 
+    [SerializeField] private ItemData testEquipItem;
+
     [Header("Components")]
     [SerializeField] private Transform equipObjectOrigin;
     [SerializeField] private MouseUtilities mouseUtilities;
 
-    private void Update()
+    void Start()
+    {
+        Equip(testEquipItem);
+    }
+
+    void Update()
     {
         Vector2 mouseDir = mouseUtilities.GetMouseDirection(transform.position);
 
@@ -35,10 +42,10 @@ public class EquipController : MonoBehaviour
         if(HasItemEquipped())
         {
             UnEquip();
-
-            curEquipObject = Instantiate(item.EquipPrefab, equipObjectOrigin);
-            curEquipItem = curEquipObject.GetComponent<EquipItem>();
         }
+
+        curEquipObject = Instantiate(item.EquipPrefab, equipObjectOrigin);
+        curEquipItem = curEquipObject.GetComponent<EquipItem>();
     }
 
     public void UnEquip ()
