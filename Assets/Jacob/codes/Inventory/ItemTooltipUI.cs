@@ -1,18 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ItemTooltipUI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private GameObject tooltipContainer;
+    [SerializeField] private TextMeshProUGUI itemNameText;
+    [SerializeField] private TextMeshProUGUI itemDescriptionText;
+
+    public void SetTooltip(itemsData item)
     {
-        
+        tooltipContainer.SetActive(true);
+        itemNameText.text = item.DisplayName;
+        itemDescriptionText.text = item.Description;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void DisableTooltip()
     {
-        
+        tooltipContainer.SetActive(false);
     }
+
+
 }

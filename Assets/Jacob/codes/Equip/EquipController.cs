@@ -11,16 +11,9 @@ public class EquipController : MonoBehaviour
 
     private bool useInput;
 
-    [SerializeField] private itemsData testEquipItme;
-
     [Header("Components")]
     [SerializeField] private Transform equipObjectOrigin;
     [SerializeField] private MouseUtilities mouseUtilities;
-
-    void Start()
-    {
-        Equip(testEquipItme);
-    }
 
     void Update()
     {
@@ -37,23 +30,19 @@ public class EquipController : MonoBehaviour
         }
     }
 
-    public void Equip (itemsData items)
+    public void Equip(itemsData item)
     {
         if (HasItemEquipped())
-        {
             UnEquip();
-        }
 
-        curEquipObject = Instantiate(items.EquipPrefab, equipObjectOrigin);
+        curEquipObject = Instantiate(item.EquipPrefab, equipObjectOrigin);
         curEquipItem = curEquipObject.GetComponent<EquipItem>();
     }
 
     public void UnEquip()
     {
-        if(curEquipItem != null)
-        {
+        if (curEquipObject != null)
             Destroy(curEquipObject);
-        }
 
         curEquipItem = null;
     }
@@ -63,15 +52,11 @@ public class EquipController : MonoBehaviour
         return curEquipItem != null;
     }
 
-    public void OnUseInput (InputAction.CallbackContext context)
+    public void OnUseInput(InputAction.CallbackContext context)
     {
-        if(context.phase == InputActionPhase.Performed)
-        {
+        if (context.phase == InputActionPhase.Performed)
             useInput = true;
-        }
-        if(context.phase == InputActionPhase.Canceled)
-        {
+        if (context.phase == InputActionPhase.Canceled)
             useInput = false;
-        }
     }
 }

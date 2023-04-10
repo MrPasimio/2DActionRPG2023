@@ -12,7 +12,6 @@ public class InventoryUI : MonoBehaviour
         for (int i = 0; i < uiSlots.Length; i++)
         {
             uiSlots[i].SetItemSlot(items[i]);
-
         }
     }
 }
